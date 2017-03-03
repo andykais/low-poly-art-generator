@@ -1,0 +1,51 @@
+{
+  "extends": "plugin:jsx-a11y/recommended",
+  "plugins": [
+    "import",
+    "react",
+    "jsx-a11y"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.config.dev.js"
+      }
+    }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "prefer-const": "error",
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-unused-vars": ["error", {"args": "none"}],
+    "object-curly-spacing": ["error", "always"],
+
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+
+    "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/extensions": [2, { "js": "never", "json": "always" }]
+  }
+}
